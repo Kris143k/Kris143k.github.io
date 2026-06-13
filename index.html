@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Krish Patel — Full-Stack Developer & Graphic Designer Portfolio. Discover original graphic designs and robust full-stack applications.">
+  <meta name="keywords"
+    content="Krish Patel, Developer, Graphic Designer, CSE, KIIT, Portfolio, Full-Stack Developer, Freelance Designer, Web Developer">
+  <meta name="author" content="Krish Patel">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://krishpatel.design">
+  <meta property="og:title" content="Krish Patel — Developer & Designer">
+  <meta property="og:description"
+    content="CSE Undergraduate with strong skills in DSA, backend development, and graphic design. Check out my work!">
+  <meta property="og:image" content="assets/brew-bloom.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Krish Patel — Developer & Designer">
+  <meta property="twitter:description"
+    content="CSE Undergraduate with strong skills in DSA, backend development, and graphic design.">
+
+  <title>Krish Patel — Developer &amp; Designer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- STICKY NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">KP<span>.</span></a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-status">
+        Available for Projects
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE OVERLAY MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#work" class="mobile-link">Work</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <!-- Three.js Particle Canvas -->
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+    <!-- CSS Fallback Background -->
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-orb hero-orb--3"></div>
+    </div>
+
+    <!-- Grid overlay -->
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">I Design &amp; I Develop</div>
+      <h1>Versatile creator bridging code and aesthetic <em>craft</em></h1>
+      <p class="hero-sub">Full-Stack Software Developer &amp; Graphic Designer. CSE @ KIIT. Specializing in
+        high-performance backend systems and striking brand assets.</p>
+
+      <div class="hero-ctas">
+        <a href="#work" class="btn btn-primary" id="hero-cta-work">
+          View My Work
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <a href="#contact" class="btn btn-outline" id="hero-cta-contact">Get in Touch</a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <label>GPA</label>
+          <span class="counter-val" data-target="9.55" data-decimals="2">9.55</span>
+        </div>
+        <div class="hero-meta-item">
+          <label>Projects</label>
+          <span class="counter-val" data-target="11" data-decimals="0">11</span> Finished
+        </div>
+        <div class="hero-meta-item">
+          <label>Availability</label>
+          <span>Open to Freelance</span>
+        </div>
+        <div class="hero-meta-item">
+          <label>Location</label>
+          <span>Bhubaneswar, IN</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
+
+  <!-- VALUE STRIP (Marquee) -->
+  <section class="value-strip" aria-label="Key values">
+    <div class="marquee-wrapper" id="marquee-wrapper">
+      <!-- Original items -->
+      <div class="value-item">
+        <div class="value-icon">⏱️</div><span>Fast Delivery</span>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">💻</div><span>Clean, Scalable Code</span>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🎨</div><span>100% Original Designs</span>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🚀</div><span>Performance-First</span>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">📱</div><span>Mobile Responsive</span>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">🔒</div><span>Secure Architecture</span>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">✨</div><span>Pixel Perfect</span>
+      </div>
+      <div class="value-item">
+        <div class="value-icon">☁️</div><span>Cloud-Ready</span>
+      </div>
+      <!-- Duplicate for seamless loop -->
+      <div class="value-item" aria-hidden="true">
+        <div class="value-icon">⏱️</div><span>Fast Delivery</span>
+      </div>
+      <div class="value-item" aria-hidden="true">
+        <div class="value-icon">💻</div><span>Clean, Scalable Code</span>
+      </div>
+      <div class="value-item" aria-hidden="true">
+        <div class="value-icon">🎨</div><span>100% Original Designs</span>
+      </div>
+      <div class="value-item" aria-hidden="true">
+        <div class="value-icon">🚀</div><span>Performance-First</span>
+      </div>
+      <div class="value-item" aria-hidden="true">
+        <div class="value-icon">📱</div><span>Mobile Responsive</span>
+      </div>
+      <div class="value-item" aria-hidden="true">
+        <div class="value-icon">🔒</div><span>Secure Architecture</span>
+      </div>
+      <div class="value-item" aria-hidden="true">
+        <div class="value-icon">✨</div><span>Pixel Perfect</span>
+      </div>
+      <div class="value-item" aria-hidden="true">
+        <div class="value-icon">☁️</div><span>Cloud-Ready</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section class="work-section section-pad" id="work">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-tag">Portfolio</div>
+        <h2 class="section-title">Selected <em>Works</em></h2>
+        <p class="section-subtitle">A collection of software applications and commercial brand designs completed to
+          solve complex problems and establish visual identity.</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar reveal" style="margin-top: 36px;">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="dev">Development</button>
+        <button class="filter-btn" data-filter="logo">Logo</button>
+        <button class="filter-btn" data-filter="social">Social Media</button>
+        <button class="filter-btn" data-filter="thumbnail">Thumbnail</button>
+        <button class="filter-btn" data-filter="poster">Poster</button>
+        <button class="filter-btn" data-filter="brandkit">Brand Kit</button>
+        <button class="filter-btn" data-filter="landing">Landing Page</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+        <button class="filter-btn" data-filter="realtime">Real-Time</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="project-grid reveal-stagger" id="project-grid">
+
+        <!-- Project 1: Brew & Bloom -->
+        <div class="project-card" data-project-id="1" data-category="design logo" tabindex="0" role="button"
+          aria-label="View Brew and Bloom project">
+          <div class="card-shine"></div>
+          <div class="card-glow"></div>
+          <div class="project-thumb">
+            <img src="assets/brew-bloom.png" alt="Brew &amp; Bloom Logo Design" loading="lazy">
+            <div class="project-overlay">
+              <span class="btn btn-primary">View Case Study</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Logo Design · Cafe</div>
+            <h3 class="project-title">Brew &amp; Bloom Coffee Co.</h3>
+            <p class="project-desc">A specialty coffee shop in Portland needing a warm, organic botanical logo and
+              cohesive brand guidelines.</p>
+            <div class="project-tech">
+              <span>Figma</span>
+              <span>Illustrator</span>
+              <span>Branding</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: NovaBit Labs -->
+        <div class="project-card" data-project-id="2" data-category="design logo" tabindex="0" role="button"
+          aria-label="View NovaBit Labs project">
+          <div class="card-shine"></div>
+          <div class="card-glow"></div>
+          <div class="project-thumb">
+            <img src="assets/novabit.png" alt="NovaBit Labs Logo Design" loading="lazy">
+            <div class="project-overlay">
+              <span class="btn btn-primary">View Case Study</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Logo Design · Tech Startup</div>
+            <h3 class="project-title">NovaBit Labs</h3>
+            <p class="project-desc">A fintech startup needing a modern, minimal wordmark with an abstract "N" icon
+              conveying speed and security.</p>
+            <div class="project-tech">
+              <span>Figma</span>
+              <span>Illustrator</span>
+              <span>Fintech</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Verde Kitchen -->
+        <div class="project-card" data-project-id="3" data-category="design social" tabindex="0" role="button"
+          aria-label="View Verde Kitchen project">
+          <div class="card-shine"></div>
+          <div class="card-glow"></div>
+          <div class="project-thumb">
+            <img src="assets/verde-kitchen.png" alt="Verde Kitchen Instagram Feed" loading="lazy">
+            <div class="project-overlay">
+              <span class="btn btn-primary">View Case Study</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Social Media · Restaurant</div>
+            <h3 class="project-title">Verde Kitchen — Instagram Feed</h3>
+            <p class="project-desc">A plant-based restaurant needed 12 cohesive posts, carousel designs, and story
+              templates for their spring launch.</p>
+            <div class="project-tech">
+              <span>Photoshop</span>
+              <span>Social Media</span>
+              <span>Aesthetics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Aurelie Clothing -->
+        <div class="project-card" data-project-id="4" data-category="design social" tabindex="0" role="button"
+          aria-label="View Aurelie Clothing project">
+          <div class="card-shine"></div>
+          <div class="card-glow"></div>
+          <div class="project-thumb">
+            <img src="assets/aurelie.png" alt="Aurelie Clothing Instagram Ads" loading="lazy">
+            <div class="project-overlay">
+              <span class="btn btn-primary">View Case Study</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Social Media · Fashion Brand</div>
+            <h3 class="project-title">Aurelie Clothing — Instagram Ad</h3>
+            <p class="project-desc">A bold, high-contrast editorial ad campaign launching a streetwear brand's seasonal
+              collection.</p>
+            <div class="project-tech">
+              <span>Photoshop</span>
+              <span>After Effects</span>
+              <span>Fashion Ad</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: TechTalks Thumbnail -->
+        <div class="project-card" data-project-id="5" data-category="design thumbnail" tabindex="0" role="button"
+          aria-label="View TechTalks thumbnail project">
+          <div class="card-shine"></div>
+          <div class="card-glow"></div>
+          <div class="project-thumb">
+            <img src="assets/techtalks.png" alt="TechTalks YouTube Thumbnail" loading="lazy">
+            <div class="project-overlay">
+              <span class="btn btn-primary">View Case Study</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">YouTube Thumbnail · Tech Channel</div>
+            <h3 class="project-title">TechTalks by Arjun Thumbnail</h3>
+            <p class="project-desc">A high-CTR thumbnail featuring bold typography, emotion cutouts, and technical
+              visual assets.</p>
+            <div class="project-tech">
+              <span>Photoshop</span>
+              <span>Graphic Design</span>
+              <span>YouTube Marketing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: IronEdge Gym Poster -->
+        <div class="project-card" data-project-id="6" data-category="design poster" tabindex="0" role="button"
+          aria-label="View IronEdge Gym poster project">
+          <div class="card-shine"></div>
+          <div class="card-glow"></div>
+          <div class="project-thumb">
+            <img src="assets/ironedge.png" alt="IronEdge Gym Poster Design" loading="lazy">
+            <div class="project-overlay">
+              <span class="btn btn-primary">View Case Study</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Poster / Flyer · Fitness</div>
+            <h3 class="project-title">IronEdge Gym "Iron Week" Poster</h3>
+            <p class="project-desc">A high-energy, dark-themed event poster and flyer design for a 7-day physical
+              challenge.</p>
+            <div class="project-tech">
+              <span>Photoshop</span>
+              <span>Illustrator</span>
+              <span>Print Media</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7: LexGroup Brand Kit -->
+        <div class="project-card" data-project-id="7" data-category="design brandkit" tabindex="0" role="button"
+          aria-label="View LexGroup brand kit project">
+          <div class="card-shine"></div>
+          <div class="card-glow"></div>
+          <div class="project-thumb project-thumb--gradient thumb-lexgroup">
+            ⚖️ LexGroup Legal
+            <div class="project-overlay">
+              <span class="btn btn-primary">View Case Study</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Brand Kit · Law Firm</div>
+            <h3 class="project-title">LexGroup Legal Brand Identity</h3>
+            <p class="project-desc">A boutique law firm brand kit featuring premium double-sided business cards,
+              letterhead, and sophisticated charcoal-gold assets.</p>
+            <div class="project-tech">
+              <span>Illustrator</span>
+              <span>Figma</span>
+              <span>Corporate Branding</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8: Nestline Landing Page -->
+        <div class="project-card" data-project-id="8" data-category="design landing" tabindex="0" role="button"
+          aria-label="View Nestline landing page project">
+          <div class="card-shine"></div>
+          <div class="card-glow"></div>
+          <div class="project-thumb project-thumb--gradient thumb-nestline">
+            🏠 Nestline UI
+            <div class="project-overlay">
+              <span class="btn btn-primary">View Case Study</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Landing Page Mockup · Proptech</div>
+            <h3 class="project-title">Nestline — Property Search UI</h3>
+            <p class="project-desc">A trustworthy, conversion-focused desktop and mobile landing page mockup designed in
+              Figma for real estate tech.</p>
+            <div class="project-tech">
+              <span>Figma</span>
+              <span>UI/UX Design</span>
+              <span>Responsive Grid</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 9: WanderLust (Dev) -->
+        <div class="project-card" data-project-id="9" data-category="dev fullstack" tabindex="0" role="button"
+          aria-label="View WanderLust development project">
+          <div class="card-shine"></div>
+          <div class="card-glow"></div>
+          <div class="project-thumb project-thumb--gradient thumb-wanderlust">
+            ✈️ WanderLust App
+            <div class="project-overlay">
+              <span class="btn btn-primary">View Details</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Full-Stack · Web Platform</div>
+            <h3 class="project-title">WanderLust — Travel Platform</h3>
+            <p class="project-desc">A MERN-stack travel and booking platform featuring secure token authentication,
+              review integration, and dynamic listings.</p>
+            <div class="project-tech">
+              <span>MongoDB</span>
+              <span>Express</span>
+              <span>React</span>
+              <span>NodeJS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 10: Realtime Chat App (Dev) -->
+        <div class="project-card" data-project-id="10" data-category="dev realtime" tabindex="0" role="button"
+          aria-label="View realtime chat app project">
+          <div class="card-shine"></div>
+          <div class="card-glow"></div>
+          <div class="project-thumb project-thumb--gradient thumb-chatapp">
+            💬 ChatIO
+            <div class="project-overlay">
+              <span class="btn btn-primary">View Details</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Real-Time · WebSockets</div>
+            <h3 class="project-title">Realtime Messaging Application</h3>
+            <p class="project-desc">A highly responsive chat application supporting active presence indicators,
+              multi-room chat rooms, and real-time push alerts.</p>
+            <div class="project-tech">
+              <span>NodeJS</span>
+              <span>Socket.io</span>
+              <span>MongoDB</span>
+              <span>HTML5</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 11: Notification Service (Dev) -->
+        <div class="project-card" data-project-id="11" data-category="dev backend" tabindex="0" role="button"
+          aria-label="View notification service project">
+          <div class="card-shine"></div>
+          <div class="card-glow"></div>
+          <div class="project-thumb project-thumb--gradient thumb-notification">
+            🔔 QueueNotify
+            <div class="project-overlay">
+              <span class="btn btn-primary">View Details</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-category">Backend · Microservice</div>
+            <h3 class="project-title">Notification Service System</h3>
+            <p class="project-desc">A scalable event-driven notification queue backend using RabbitMQ for fast,
+              fault-tolerant alerts across systems.</p>
+            <div class="project-tech">
+              <span>NodeJS</span>
+              <span>RabbitMQ</span>
+              <span>MongoDB</span>
+              <span>REST APIs</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL POPUP FOR DETAILS -->
+  <div class="modal-backdrop" id="modal-backdrop"></div>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close Modal">&times;</button>
+    <div id="modal-content-container">
+      <!-- Injected Dynamically by JS -->
+    </div>
+  </div>
+
+  <!-- ABOUT & TOOLS SECTION -->
+  <section class="section-pad" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-avatar reveal">
+          <div class="about-avatar-wrap">
+            <div class="avatar-glow-ring"></div>
+            <div class="about-avatar-img">
+              <img src="assets/cvct4.jpeg" alt="Krish Patel">
+            </div>
+          </div>
+          <div class="about-avatar-badge">CSE Undergraduate</div>
+        </div>
+
+        <div class="about-text reveal">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-title">A developer who thinks in <em>grids</em>, a designer who writes in <em>code</em>
+          </h2>
+          <p>I am Krish Patel, a Computer Science and Engineering undergraduate at KIIT (Kalinga Institute of Industrial
+            Technology). I am uniquely positioned at the intersection of logical backend engineering and creative
+            graphic design, allowing me to build robust applications and beautiful brand aesthetics.</p>
+          <p>Whether creating high-performance microservices using Node.js and RabbitMQ, performing Big Data analytical
+            queries, or designing viral A/B test thumbnails and complete brand packages, I bring precise attention to
+            structural alignment and responsive performance.</p>
+
+          <div class="about-education">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-info">
+              <h4>Kalinga Institute of Industrial Technology</h4>
+              <p>B.Tech Computer Science &amp; Engineering (2022–2026) · Bhubaneswar, IN</p>
+            </div>
+            <div class="edu-gpa">GPA 9.55</div>
+          </div>
+
+          <div class="about-btns">
+            <a href="#contact" class="btn btn-primary">Hire Me</a>
+            <a href="krish_resume.pdf" class="btn btn-dark-outline" download>
+              Download Resume
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS IN TWO COLUMNS -->
+      <div class="skills-split reveal">
+        <!-- Design Skills -->
+        <div class="skills-column">
+          <div class="skills-column-icon">🎨</div>
+          <h3>Graphic Design</h3>
+          <div class="skill-category">
+            <div class="skill-category-label">Disciplines</div>
+            <div class="skill-tags">
+              <span class="skill-tag skill-tag--design">Logo Design</span>
+              <span class="skill-tag skill-tag--design">Social Media Graphics</span>
+              <span class="skill-tag skill-tag--design">YouTube Thumbnails</span>
+              <span class="skill-tag skill-tag--design">Posters &amp; Flyers</span>
+              <span class="skill-tag skill-tag--design">Corporate Brand Kits</span>
+              <span class="skill-tag skill-tag--design">Landing Page Mockups</span>
+              <span class="skill-tag skill-tag--design">UI/UX Layouts</span>
+            </div>
+          </div>
+          <div class="skill-category" style="margin-top: 24px;">
+            <div class="skill-category-label">Tools</div>
+            <div class="skill-tags">
+              <span class="skill-tag">Adobe Photoshop</span>
+              <span class="skill-tag">Adobe Illustrator</span>
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Canva Pro</span>
+              <span class="skill-tag">After Effects</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tech Skills -->
+        <div class="skills-column">
+          <div class="skills-column-icon">💻</div>
+          <h3>Software Development</h3>
+          <div class="skill-category">
+            <div class="skill-category-label">Programming &amp; Frameworks</div>
+            <div class="skill-tags">
+              <span class="skill-tag skill-tag--dev">Python</span>
+              <span class="skill-tag skill-tag--dev">Java</span>
+              <span class="skill-tag skill-tag--dev">JavaScript</span>
+              <span class="skill-tag skill-tag--dev">Node.js</span>
+              <span class="skill-tag skill-tag--dev">Express.js</span>
+              <span class="skill-tag skill-tag--dev">ReactJS</span>
+              <span class="skill-tag skill-tag--dev">PySpark</span>
+            </div>
+          </div>
+          <div class="skill-category" style="margin-top: 24px;">
+            <div class="skill-category-label">Data &amp; Infrastructure</div>
+            <div class="skill-tags">
+              <span class="skill-tag skill-tag--dev">MySQL</span>
+              <span class="skill-tag skill-tag--dev">MongoDB</span>
+              <span class="skill-tag skill-tag--dev">Git / GitHub</span>
+              <span class="skill-tag skill-tag--dev">Docker</span>
+              <span class="skill-tag skill-tag--dev">AWS Academy</span>
+              <span class="skill-tag skill-tag--dev">RabbitMQ</span>
+              <span class="skill-tag skill-tag--dev">REST APIs</span>
+              <span class="skill-tag skill-tag--dev">PowerBI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Skill Sphere -->
+      <div class="skill-sphere-section reveal">
+        <div class="skill-sphere-wrapper">
+          <canvas id="skill-sphere-canvas" aria-label="Animated 3D technology skill sphere"></canvas>
+        </div>
+        <div>
+          <div class="section-tag">Technologies</div>
+          <h3 class="section-title" style="font-size: clamp(24px, 3vw, 36px);">Full-Stack <em>Toolchain</em></h3>
+          <p style="color: var(--text-secondary); line-height: 1.8; max-width: 420px;">
+            From database schema design to WebGL shaders — I work across the entire modern development stack with a
+            focus on clean architecture and measurable performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="work-section section-pad" id="experience-section">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-tag">Career</div>
+        <h2 class="section-title">Internship <em>Experience</em></h2>
+        <p class="section-subtitle">Hands-on corporate training and development internships where theoretical concepts
+          are put into production code.</p>
+      </div>
+
+      <div class="exp-timeline reveal">
+        <div class="exp-item">
+          <div class="exp-date">Dec 2025 – May 2026</div>
+          <h3 class="exp-role">System Trainee Engineer Intern</h3>
+          <div class="exp-company">Infosys — Mysuru, Karnataka, India</div>
+          <ul class="exp-list">
+            <li>Successfully completed extensive training in enterprise Java development and SQL database structures,
+              clearing all technical assessments.</li>
+            <li>Gained hands-on experience in Big Data Technologies including distributed computing with PySpark, Unix
+              script execution, MongoDB querying, and analytical modeling in PowerBI.</li>
+            <li>Independently developed a Hospital Residents Matching System using SQL, Python, and PowerBI, automating
+              match rules and visualizing resource allocations.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="section-pad" id="services">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-tag">Services</div>
+        <h2 class="section-title">What I <em>Offer</em></h2>
+        <p class="section-subtitle">High-quality design and development services tailored to establish your product's
+          market presence and ensure robust delivery.</p>
+      </div>
+
+      <div class="services-grid reveal-stagger">
+        <!-- Logo Card -->
+        <div class="service-card">
+          <div class="service-icon">✒️</div>
+          <h3>Logo Design</h3>
+          <p>Custom logos, monograms, brand marks, and complete vector systems to distinguish your company. Delivered
+            with style guides.</p>
+          <div class="service-price">Starting at $250 · 3-5 days</div>
+        </div>
+
+        <!-- Social Media Card -->
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3>Social Media Graphics</h3>
+          <p>Instagram feeds, story templates, YouTube thumbnails, and animated visual assets optimized for high
+            engagement and conversion.</p>
+          <div class="service-price">Starting at $150 · 2-3 days</div>
+        </div>
+
+        <!-- Print Card -->
+        <div class="service-card">
+          <div class="service-icon">🖨️</div>
+          <h3>Print &amp; Poster</h3>
+          <p>Event flyers, custom posters, stationery, double-sided business cards, and print-ready high resolution
+            (300dpi) layouts.</p>
+          <div class="service-price">Starting at $100 · 2-4 days</div>
+        </div>
+
+        <!-- Web Card -->
+        <div class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>Full-stack web applications, REST microservices, landing page layouts, database systems, and cloud
+            integration built with clean code.</p>
+          <div class="service-price">Starting at $500 · 7-14 days</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES & ACTIVITIES SECTION -->
+  <section class="work-section section-pad" id="certificates">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-tag">Achievements</div>
+        <h2 class="section-title">Certificates &amp; <em>Activities</em></h2>
+        <p class="section-subtitle">Credentials, scholarships, and delegate roles that demonstrate lifelong learning and
+          social initiative.</p>
+      </div>
+
+      <div class="cert-grid reveal-stagger">
+        <!-- Infosys Cert -->
+        <div class="cert-card">
+          <div class="cert-icon cert-icon--orange">📜</div>
+          <div>
+            <h4>Infosys Internship</h4>
+            <p>System Trainee Engineer intern verification</p>
+            <a href="https://drive.google.com/file/d/1-EQSSizmJMCyIRjoBmqfnDEelkNE32T_/view?usp=sharing" target="_blank"
+              rel="noopener">View Credential →</a>
+          </div>
+        </div>
+
+        <!-- Keploy Cert -->
+        <div class="cert-card">
+          <div class="cert-icon cert-icon--blue">🦊</div>
+          <div>
+            <h4>Keploy Fellowship</h4>
+            <p>API automation fellowship graduate</p>
+            <a href="https://drive.google.com/file/d/1IDbt5kT19LC86_p18yrawF1kaO7xd9MG/view?usp=sharing" target="_blank"
+              rel="noopener">View Credential →</a>
+          </div>
+        </div>
+
+        <!-- AWS Cert -->
+        <div class="cert-card">
+          <div class="cert-icon cert-icon--orange">☁️</div>
+          <div>
+            <h4>AWS Cloud Architecting</h4>
+            <p>Academy Cloud Architecting certification</p>
+            <a href="https://www.credly.com/go/og0Bnk69" target="_blank" rel="noopener">View Credential →</a>
+          </div>
+        </div>
+
+        <!-- Scholarship Cert -->
+        <div class="cert-card">
+          <div class="cert-icon cert-icon--green">🎓</div>
+          <div>
+            <h4>Study In India</h4>
+            <p>Full Scholarship recipient from Embassy of India, Nepal</p>
+            <a href="https://drive.google.com/file/d/1nC96dv3uGtk8t6mATAtrLbDz_SqZU6Xa/view?usp=sharing" target="_blank"
+              rel="noopener">View Scholar Document →</a>
+          </div>
+        </div>
+
+        <!-- Youth-20 Delegate -->
+        <div class="cert-card">
+          <div class="cert-icon cert-icon--blue">🤝</div>
+          <div>
+            <h4>Youth-20 Delegate</h4>
+            <p>Consultation representative, KIIT University</p>
+            <a href="https://drive.google.com/file/d/1geg43KAvqljT4DhtElSnrrG3k0SbUYbv/view?usp=sharing" target="_blank"
+              rel="noopener">View Delegate Certificate →</a>
+          </div>
+        </div>
+
+        <!-- Art of Giving Delegate -->
+        <div class="cert-card">
+          <div class="cert-icon cert-icon--green">❤️</div>
+          <div>
+            <h4>Art of Giving Movement</h4>
+            <p>Social outreach delegate (aog-23-2-01745)</p>
+            <a href="https://drive.google.com/file/d/1oHQGlyOH-Z2XibkT1Z6uLH6P0T8ar39P/view?usp=sharing" target="_blank"
+              rel="noopener">View Delegate Card →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section section-pad" id="contact">
+    <div class="container">
+      <div class="reveal">
+        <div class="section-tag" style="color: var(--accent);">Get in Touch</div>
+        <h2 class="section-title">Let's discuss your <em>project</em></h2>
+        <p class="section-subtitle">Ready to collaborate? Fill out the brief form below, or reach out directly via mail
+          or social profiles.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal">
+          <form id="contact-form" novalidate>
+            <!-- Web3Forms config -->
+            <input type="hidden" name="access_key" value="bc47d01f-0e8a-4fad-8656-13cede15194f">
+            <input type="hidden" name="subject" value="New Portfolio Inquiry">
+            <input type="hidden" name="from_name" value="Portfolio Contact Form">
+            <input type="checkbox" name="botcheck" style="display:none;">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Your Name</label>
+                <input type="text" id="form-name" name="name" placeholder="John Doe" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="form-email">Your Email</label>
+                <input type="email" id="form-email" name="email" placeholder="john@example.com" required
+                  autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-project">Project Type</label>
+                <select id="form-project" name="project_type">
+                  <option value="logo">Logo &amp; Brand Design</option>
+                  <option value="social">Social Graphics &amp; Ads</option>
+                  <option value="web">Full-Stack Web App / API</option>
+                  <option value="poster">Print / Posters</option>
+                  <option value="other">Other Collaboration</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="form-budget">Budget Range</label>
+                <select id="form-budget" name="budget">
+                  <option value="small">$100 – $500</option>
+                  <option value="medium">$500 – $1,500</option>
+                  <option value="large">$1,500 – $5,000</option>
+                  <option value="enterprise">$5,000+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Tell me about your requirements</label>
+              <textarea id="form-message" name="message"
+                placeholder="Please describe what you want to achieve, timeline, and core goals..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="form-submit-btn">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info Side -->
+        <div class="contact-info reveal">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📧</div>
+            <div class="contact-info-text">
+              <h4>Direct Email</h4>
+              <p><a href="mailto:krishpatel98450@gmail.com">krishpatel98450@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-text">
+              <h4>Office Location</h4>
+              <p>Bhubaneswar, Odisha, India · open to global remote contracts</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="contact-info-icon">🚀</div>
+            <div class="contact-info-text">
+              <h4>Professional Channels</h4>
+              <div class="contact-social">
+                <a href="https://github.com/Kris143k" class="social-link" target="_blank" rel="noopener"
+                  aria-label="GitHub">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/krish-patel-a20788261/" class="social-link" target="_blank"
+                  rel="noopener" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+                <a href="https://leetcode.com/u/22054339/" class="social-link" target="_blank" rel="noopener"
+                  aria-label="LeetCode">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M13.483 0a1.374 1.374 0 0 0-.961.414l-9.75 9.75a1.374 1.374 0 0 0 0 1.942l4.885 4.885a1.374 1.374 0 0 0 1.942 0l9.75-9.75a1.374 1.374 0 0 0-.962-2.342h-4.885A1.374 1.374 0 0 0 13.483 0zm-8.835 11.236l9.75-9.75h4.885l-9.75 9.75H9.533zM3.414 11.236A1.374 1.374 0 0 0 2.453 13.483l4.885 4.885a1.374 1.374 0 0 0 1.942 0l2.427-2.427-4.885-4.885c-.961-.962-2.342-.962-3.408.18z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-availability">
+            <div class="dot"></div>
+            <p>Active booking status: Open to work</p>
+          </div>
+
+          <p class="contact-reply">I reply to all serious design and development inquiries within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-text">&copy; 2026 Krish Patel. Engineered for elegance.</span>
+      <div class="footer-social">
+        <a href="https://github.com/Kris143k" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/krish-patel-a20788261/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://leetcode.com/u/22054339/" target="_blank" rel="noopener">LeetCode</a>
+      </div>
+      <a href="#" class="back-to-top" aria-label="Back to Top">&uarr;</a>
+    </div>
+  </footer>
+
+  <!-- Three.js CDN (deferred) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
+  <!-- GSAP + ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- 3D Scene -->
+  <script src="three-scene.js" defer></script>
+
+  <!-- Main JS -->
+  <script src="index.js" defer></script>
+</body>
+
+</html>
